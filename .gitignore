@@ -42,6 +42,11 @@ build/Release
 node_modules/
 jspm_packages/
 
+# Project Resource Files directories
+public/lessons/
+public/sitetexts/
+public/worksheets/
+
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
