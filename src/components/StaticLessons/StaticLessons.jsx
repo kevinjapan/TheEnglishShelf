@@ -12,11 +12,16 @@ const StaticLessons = props => {
     useEffect(() => {
         let target = document.getElementById('top')
         if(target !== null) target.scrollIntoView()
-    },[])
+    },[props.service])
 
     useEffect(() => {
         setService(props.service)
     },[props.service])
+
+    const scroll_to_top = () => {
+        let target = document.getElementById('top')
+        if(target !== null) target.scrollIntoView()
+    }
 
     let lister_config = {
         l_service: service,
@@ -42,7 +47,7 @@ const StaticLessons = props => {
             />
             <div className="row bg-white">
                 <div className="col-12 col-md-11 m-auto">                    
-                    <StaticLister config={lister_config} />
+                    <StaticLister config={lister_config} onChangePage={scroll_to_top}/>
                 </div>
             </div>
         </div>

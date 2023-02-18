@@ -15,8 +15,9 @@ const StaticLister = props => {
     const [is_create_new,setIsCreateNew] = useState(false)
 
     useEffect(() => {
+        props.onChangePage()
         setPage(1)
-    },[props.config.l_service])
+    },[props.config.l_service,props])
 
     const handleSelectedItem = item_id => {
         if(props.onSelectedItem) {
@@ -25,6 +26,7 @@ const StaticLister = props => {
     }
 
     const openPage = page_num => {
+        props.onChangePage()
         setPage(page_num)
     }
 

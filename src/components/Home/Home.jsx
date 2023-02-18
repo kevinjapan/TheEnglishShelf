@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from "react-router-dom"
 
 
 
 const Home = () => {
+
+    useEffect(() => {
+        let target = document.getElementById('top')
+        if(target !== null) target.scrollIntoView()
+    },[])
 
     return (
         <div className="App container col-12 text-center bg-primary">
