@@ -25,9 +25,7 @@ const StaticPrimaryLayout = props => {
             </header>
 
             <div className="row">
-
                 <Routes>
-
                     <Route path="/" element={<Home />} />
                     <Route path="/lessons" element={<StaticLessons service="lessons" filter="type" filter_value={LESSON_TYPES.LESSONS}/>} />
                     <Route path="/lessons/:url" element={<StaticLessonContainer />} />
@@ -44,9 +42,7 @@ const StaticPrimaryLayout = props => {
 
                     <Route path="/notfound" element={<NotFound resource_type="lesson"/>} />
                     <Route path="/*" element={<NotFound resource_type="page"/>} />
-
                 </Routes>
-
             </div>
 
             <AppStatus />
