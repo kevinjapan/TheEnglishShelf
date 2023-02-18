@@ -1,5 +1,4 @@
 # theenglishshelf
- the english shelf static website
  
  A React JS static website with JSON dataset.
 
