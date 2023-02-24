@@ -41,7 +41,7 @@ const StaticPaginator = props => {
     return (
         <React.Fragment>
             {total_pages > 0
-                ?   <div className="row col-11 ml-1 ml-sm-0" style={{marinInline:'auto'}}>
+                ?   <div className="row col-12 ml-1 ml-sm-0 mt-3 mb-3">
 
                         <div className="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start mb-2 text-center text-sm-left text-muted"
                             >page {page} of {total_pages}</div>

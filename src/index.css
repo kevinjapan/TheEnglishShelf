@@ -44,8 +44,6 @@ html {
 } 
 .logo_tag {
     font-size:5em;
-    text-overflow:ellipsis;
-    white-space:nowrap;
     overflow:hidden;
 }
 

@@ -47,7 +47,7 @@ const StaticPrimaryLayout = props => {
 
             <AppStatus />
     
-            <div className="row" style={{marginTop:'3rem'}}>
+            <div className="row">
                 <PrimaryFooter />
             </div>
         </div>

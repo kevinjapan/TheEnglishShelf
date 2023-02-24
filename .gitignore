@@ -47,6 +47,9 @@ public/lessons/
 public/sitetexts/
 public/worksheets/
 
+# Project Build folder
+build/
+
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 

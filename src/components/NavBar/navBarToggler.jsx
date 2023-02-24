@@ -29,7 +29,7 @@ const NavBarToggler = props => {
                         </NavLink>
                     <NavLink 
                         to="/"
-                        className="d-none d-sm-block d-md-none col-12 display-4 text-white text-no-wrap"
+                        className="d-none d-sm-block d-md-none col-12 display-4 text-white text-no-wrap text-decoration-none"
                         onClick={props.onMenuItemClicked}>
                         <div className="">The English Shelf</div>
                         </NavLink>
