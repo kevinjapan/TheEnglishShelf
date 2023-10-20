@@ -7,26 +7,27 @@ import NavBarLinker from "./navBarLinker"
 
 const NavBarSm = () => {
   
-    const [is_displayed,setIsDisplayed] = useState(false)
+   const [is_displayed,setIsDisplayed] = useState(false)
 
-    const toggleNavBar = () => {
-        setIsDisplayed(is_displayed ? false : true)
-    }
+   const toggleNavBar = () => {
+      setIsDisplayed(is_displayed ? false : true)
+   }
 
-    const menuItemClicked = () => {
-        setIsDisplayed(false)
-    }
+   const menuItemClicked = () => {
+      setIsDisplayed(false)
+   }
 
-    return (
-        <div className="row d-block d-md-none">
-            <NavBarToggler
-                onToggleNavBar={toggleNavBar}
-                onMenuItemClicked={menuItemClicked}/>
-            <NavBarLinker
-                is_displayed={is_displayed}
-                onMenuItemClicked={menuItemClicked}/>
-        </div>     
-    )
+   return (
+      <div className="row d-block d-md-none">
+         <NavBarToggler
+            onToggleNavBar={toggleNavBar}
+            onMenuItemClicked={menuItemClicked}/>
+         <NavBarLinker
+            is_mobile={true}
+            is_displayed={is_displayed}
+            onMenuItemClicked={menuItemClicked}/>
+      </div>     
+   )
 }
 
 

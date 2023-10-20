@@ -6,14 +6,15 @@ import NavBarLinker from "./navBarLinker"
 
 const NavBarLg = () => {
 
-    // const menuItemClicked = () => {}
+   // const menuItemClicked = () => {}
 
-    return (
-        <div className="row d-none d-md-block">
-            <NavBarLinker 
-                is_displayed={true}/>
-        </div>     
-    )
+   return (
+      <div className="row d-none d-md-block">
+         <NavBarLinker 
+            is_mobile={false}
+            is_displayed={true}/>
+      </div>     
+   )
 }
 
 
