@@ -1,14 +1,13 @@
 import React from 'react'
-import displayTitle from '../../uiArticles/uiArticles'
 
 
 const LessonTitles = props => {
-    return (
-        <div className="row col-12">
-            <div className="col-12 mb-1">{displayTitle(props.title)}</div>
-            <div className="col-12 display-6 text-left ">{props.tagline}</div>
-        </div>
-    )
+   return (
+      <div className="row col-12 mt-0">
+         <h1 className="heading-1 col-12 mb-1">{props.title}</h1>
+         <h2 className="heading-2 col-12 mb-5 ml-3 mt-3">{props.tagline}</h2>
+      </div>
+   )
 }
 
 

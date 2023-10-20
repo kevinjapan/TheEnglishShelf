@@ -1,5 +1,4 @@
 import React, { useState,useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import LessonNav from './LessonNav/LessonNav'
 import LessonTitles from './LessonTitles/LessonTitles'
 import LessonMeta from './LessonMeta/LessonMeta'
@@ -9,71 +8,72 @@ import LessonBlock from './LessonBlock/LessonBlock'
 
 
 const Lesson = props => {
-    
-    const [open_worksheet,setOpenWorksheet] = useState(false)
-    let navigate = useNavigate();
 
-    useEffect(() => {
-        let target = document.getElementById('top')
-        if(target !== null) target.scrollIntoView()
-    },[])
+   const [open_worksheet,setOpenWorksheet] = useState(false)
 
-    const back2List = () => {
-        navigate(-1)
-    }
+   useEffect(() => {
+      let target = document.getElementById('top')
+      if(target !== null) target.scrollIntoView()
+   },[])
 
-    const toggleWorkSheet = () => {
-        openWorkSheet()
-        let target = document.getElementById('worksheet_top')
-        if(target !== null) target.scrollIntoView()
-    }
+   const toggleWorkSheet = () => {
+      openWorkSheet()
+      let target = document.getElementById('worksheet_top')
+      if(target !== null) target.scrollIntoView()
+   }
 
-    const openWorkSheet = () => {
-        setOpenWorksheet(!open_worksheet)
-    }
-    
-    const { title,tagline,keywords,duration,content,author,worksheet_title,worksheet_path,image_path } = props.lesson
+   const openWorkSheet = () => {
+      setOpenWorksheet(!open_worksheet)
+   }
+   
+   const { title,tagline,keywords,duration,content,author,worksheet_title,worksheet_path,image_path } = props.lesson
 
-    return (
-        props.lesson.title
-            ?    <div className="lesson col-10 mx-auto my-5 border rounded bg-white">
+   return (
+      props.lesson.title
+         ?  <div className="lesson col-11 col-md-10 mx-auto my-5 rounded bg-white shadow pb-3">
 
-                    <LessonNav back2List={back2List} />
+               <LessonNav 
+                  current_lesson_id={props.lesson.id}
+                  lesson_type={props.lesson.type} />
 
-                    <LessonTitles 
-                        title={title} 
-                        tagline={tagline} />
+               <LessonTitles 
+                  title={title} 
+                  tagline={tagline} />
+                           
 
-                    <LessonMeta 
-                        keywords={keywords} 
-                        duration={duration}
-                        contributor={author} />
-                            
-                    {(worksheet_title !== " " && worksheet_title !== "" && image_path !== "")
-                        ?  <div className="col-12" >
-                                <div className="cta_link" onClick={openWorkSheet}>view worksheet..</div>
-                                {open_worksheet === true
-                                    ?   <LessonWorkSheet 
-                                            image_path={image_path} 
-                                            worksheet_path={worksheet_path} 
-                                            toggleWorkSheet={toggleWorkSheet}/>
-                                    :   null
-                                }                                
-                            </div>
-                        : null 
-                    }
+               <section className="d-lg-flex col-12 p-0">
 
-                    {content !== undefined 
+                  <div className={worksheet_title !== " " && image_path !== "" ? 'col-12 col-lg-6' : 'col-12'}>
+                     {content !== undefined 
                         ? content.map((block,index) => {
-                            return <LessonBlock key={index} block={block} />
+                           return <LessonBlock key={index} block={block} />
                         })
-                        : null}
+                        : null
+                     }
+                  </div>
+                  {(worksheet_title !== " " && image_path !== "")
+                     ?  <div className="col-12 col-lg-6 mb-5">
+                           <LessonWorkSheet 
+                              image_path={image_path} 
+                              worksheet_path={worksheet_path} 
+                              toggleWorkSheet={toggleWorkSheet} />                               
+                        </div>
+                     : null 
+                  }
+               </section>
 
-                    <LessonNav back2List={back2List} />
+               <LessonMeta 
+                  keywords={keywords} 
+                  duration={duration}
+                  contributor={author} />
 
-                </div>
-            :   null
-    )
+               <LessonNav 
+                  current_lesson_id={props.lesson.id}
+                  lesson_type={props.lesson.type} />
+
+            </div>
+         :   null
+   )
 }
 
 
