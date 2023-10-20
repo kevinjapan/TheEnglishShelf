@@ -33,7 +33,7 @@ const StaticLessons = props => {
         l_view:"card",
         l_card_width:props.card_width || "col-12 col-sm-6 col-md-6 col-lg-4",
         l_paginate:true,
-        l_items_per_page:7,
+        l_items_per_page:9,
         l_filter:props.filter,
         l_filter_value:parseInt(props.filter_value)
     }
@@ -43,7 +43,7 @@ const StaticLessons = props => {
             <StaticLessonsTitles 
                 filter_value={props.filter_value}
                 title="Lesson" 
-                tagline="for beginner, intermediate and advanced students"
+                tagline="for beginner, intermediate and advanced students!"
             />
             <div className="row bg-white">
                 <div className="col-12 col-md-11 m-auto">                    
