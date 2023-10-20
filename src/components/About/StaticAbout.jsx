@@ -13,7 +13,7 @@ const StaticAbout = () => {
     },[])
 
     return (
-        <div  className="container col-12">
+        <div  className="container col-12" style={{minHeight:'100vh'}}>
             <div className="row">
                 <div className="d-none d-lg-block col-lg-2">
                     <AboutTools />
@@ -24,6 +24,7 @@ const StaticAbout = () => {
                         selected_sitetext={selected_sitetext}
                     />
                 </div>
+               <div className="d-none d-lg-block col-lg-2"></div>
             </div>
         </div>
     )
