@@ -17,41 +17,41 @@ import StaticLessonContainer from './components/StaticLessonContainer/StaticLess
 
 const StaticPrimaryLayout = props => {
 
-    return (
-        <div className="container col-12" id="top">
+   return (
+      <div className="container col-12" id="top">
+      
+         <header className="row">
+            <PrimaryHeader />
+         </header>
 
-            <header className="row">
-                <PrimaryHeader />
-            </header>
+         <div className="row">
+            <Routes>
+               <Route path="/" element={<Home />} />
+               <Route path="/lessons" element={<StaticLessons service="lessons" filter="type" filter_value={LESSON_TYPES.LESSONS}/>} />
+               <Route path="/lessons/:url" element={<StaticLessonContainer />} />
 
-            <div className="row">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/lessons" element={<StaticLessons service="lessons" filter="type" filter_value={LESSON_TYPES.LESSONS}/>} />
-                    <Route path="/lessons/:url" element={<StaticLessonContainer />} />
+               <Route path="/letstalk" element={<StaticLessons service="letstalk" filter="type" filter_value={LESSON_TYPES.LETSTALKS}/>} />
+               <Route path="/letstalk/:url" element={<StaticLessonContainer />} />
 
-                    <Route path="/letstalk" element={<StaticLessons service="letstalk" filter="type" filter_value={LESSON_TYPES.LETSTALKS}/>} />
-                    <Route path="/letstalk/:url" element={<StaticLessonContainer />} />
+               <Route path="/protips" element={<StaticLessons service="protips" filter="type" filter_value={LESSON_TYPES.PROTIPS} card_width="col-12 col-lg-6" />} />
+               <Route path="/protips/:url" element={<StaticLessonContainer />} />
 
-                    <Route path="/protips" element={<StaticLessons service="protips" filter="type" filter_value={LESSON_TYPES.PROTIPS} card_width="col-12 col-lg-6" />} />
-                    <Route path="/protips/:url" element={<StaticLessonContainer />} />
+               <Route path="/terms" element={<Terms />} />
+               <Route path="/privacy" element={<Privacy />} />
+               <Route path="/about" element={<StaticAbout />} />
 
-                    <Route path="/terms" element={<Terms />} />
-                    <Route path="/privacy" element={<Privacy />} />
-                    <Route path="/about" element={<StaticAbout />} />
+               <Route path="/notfound" element={<NotFound resource_type="lesson"/>} />
+               <Route path="/*" element={<NotFound resource_type="page"/>} />
+            </Routes>
+         </div>
 
-                    <Route path="/notfound" element={<NotFound resource_type="lesson"/>} />
-                    <Route path="/*" element={<NotFound resource_type="page"/>} />
-                </Routes>
-            </div>
-
-            <AppStatus />
-    
-            <div className="row">
-                <PrimaryFooter />
-            </div>
-        </div>
-    )
+         <AppStatus />
+   
+         <div className="row">
+               <PrimaryFooter />
+         </div>
+      </div>
+   )
 }
 
 

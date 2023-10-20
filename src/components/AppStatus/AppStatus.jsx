@@ -6,23 +6,23 @@ import { AppContext } from '../AppContext/AppContext'
 
 const AppStatus = props => {
 
-    const {status_msg,setStatusMsg} = useContext(AppContext)
+   const {status_msg,setStatusMsg} = useContext(AppContext)
 
-    useEffect(() => {
-        // eslint-disable-next-line
-        let clear_message // prev. comment prevents warning ("clear_message not used.."")
-        if(status_msg !== "") {clear_message = setTimeout(() => setStatusMsg(""),3500)}
+   useEffect(() => {
+      // eslint-disable-next-line
+      let clear_message // prev. comment prevents warning ("clear_message not used.."")
+      if(status_msg !== "") {clear_message = setTimeout(() => setStatusMsg(""),3500)}
 
-        return (clear_message) => {
-            clearTimeout(clear_message)
-        }
-    },[status_msg,setStatusMsg])
+      return (clear_message) => {
+         clearTimeout(clear_message)
+      }
+   },[status_msg,setStatusMsg])
 
-    return (
-        status_msg !== "" 
-            ?   <div className="app_status">{status_msg}</div>
-            :   null
-    )
+   return (
+      status_msg !== "" 
+         ?   <div className="app_status">{status_msg}</div>
+         :   null
+   )
 }
 
 

@@ -13,7 +13,7 @@ const PrimaryFooter = props => {
     }
 
     return (
-        <div className="col-12 text-left bg-primary pt-2">
+        <div className="col-12 text-left bg-secondary pt-2">
             <div className="container col-12">
                <div className="row">
                   <div className="link col-12 d-sm-none text-center text-white" onClick={toppermost}>
@@ -55,7 +55,7 @@ const PrimaryFooter = props => {
                   </div>
 
                </div>
-               <div className="row text-center text-white bg-primary my-3">
+               <div className="row text-center text-white bg-secondary my-3">
                   <div className="col-12 text-center text-nowrap">Copyright © Kevin Hastie 2021 - {get_current_year()}</div>
                </div>
             </div>  

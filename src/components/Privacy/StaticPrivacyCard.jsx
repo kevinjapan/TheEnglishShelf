@@ -27,7 +27,7 @@ const StaticPrivacyCard = () => {
 
 
     return (
-        <div className="container bg-white col-12 border rounded m-2">
+        <div className="container bg-white col-12 m-2">
             {sitetext_blocks !== undefined 
                 ?   sitetext_blocks.map((block,index) => (
                         <div className="row block" key={index} block={block}>
