@@ -67,8 +67,9 @@ const StaticListerList = props => {
             ))}
          </div>
       )
-   } else {
-      return <div>loading..</div>;
+   } 
+   else {
+      return <div>loading..</div>
    }
 }
 

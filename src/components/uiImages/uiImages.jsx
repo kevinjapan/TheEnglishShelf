@@ -8,7 +8,8 @@ const getImgSrcOrBlank = image_path => {
 
    try {
       imgSrc = require('../../assets/lesson_imgs/' + image_path + '')
-   } catch {
+   } 
+   catch {
       imgSrc = require('../../assets/lesson_imgs/no_img.jpg')
    }
    return imgSrc

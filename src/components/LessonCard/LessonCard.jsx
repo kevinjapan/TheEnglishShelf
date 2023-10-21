@@ -11,22 +11,20 @@ const LessonCard = props => {
       :   "col-12 col-sm-6 col-md-6 col-lg-4"
 
    return (
-      <NavLink 
-         to={`/${props.service}/${props.item.slug}`}
-         className={`${card_width} p-1 text-decoration-none text-dark`} key={props.item.id}
-         >
+      <NavLink to={`/${props.service}/${props.item.slug}`}
+         className={`${card_width} p-1 text-decoration-none text-dark`} key={props.item.id}>
          <div className="m-1 lesson_card py-2">
             <div className="col-12 m-auto mt-3 pb-3 inlineLink">
                {props.list_meta.cols.map(col => (
-               col.list_col === "1" 
-               ?  <div 
-                     key={`${col.id}`} 
-                     className={`${col.styles} text-left col-12`}
-                     >{col.input_type === "date" 
-                        ?  null
-                        :  truncate(props.item[col.col],240)}
-                  </div>
-               : null
+                  col.list_col === "1" 
+                     ?  <div 
+                           key={`${col.id}`} 
+                           className={`${col.styles} text-left col-12`}
+                           >{col.input_type === "date" 
+                              ?  null
+                              :  truncate(props.item[col.col],240)}
+                        </div>
+                     :  null
                ))}
             </div>
          </div>

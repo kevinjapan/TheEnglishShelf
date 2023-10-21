@@ -6,12 +6,12 @@ import './App.css';
 
 const PrimaryHeader = props => {
     
-    return (
-        <div className="col-12 ">
-            <NavBarLg />
-            <NavBarSm />          
-        </div> 
-    )
+   return (
+      <div className="col-12 ">
+         <NavBarLg />
+         <NavBarSm />          
+      </div> 
+   )
 }
 
 

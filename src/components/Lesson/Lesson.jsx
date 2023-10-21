@@ -72,7 +72,7 @@ const Lesson = props => {
                   lesson_type={props.lesson.type} />
 
             </div>
-         :   null
+         :  null
    )
 }
 

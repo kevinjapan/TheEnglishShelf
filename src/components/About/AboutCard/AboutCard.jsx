@@ -10,15 +10,15 @@ const AboutCard = () => {
    useEffect(() => {
       const fetchSiteTextBlocks = async () => {
          try {
-               const response = await fetch(`/sitetexts/about.json`)
-               const jsonDataSet = await response.json()
-               if(jsonDataSet.sitetext) {
-                  setSitetextBlocks(jsonDataSet.sitetext.blocks)
-               }
+            const response = await fetch(`/sitetexts/about.json`)
+            const jsonDataSet = await response.json()
+            if(jsonDataSet.sitetext) {
+               setSitetextBlocks(jsonDataSet.sitetext.blocks)
+            }
          }
          catch(error) {
-               // if resource not found, server returns a valid 200 OK html but json will fail
-               setStatusMsg('Sorry, the page could not be fully loaded at this time.')
+            // if resource not found, server returns a valid 200 OK html but json will fail
+            setStatusMsg('Sorry, the page could not be fully loaded at this time.')
          }
       }
       fetchSiteTextBlocks()
