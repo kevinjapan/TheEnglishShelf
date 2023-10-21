@@ -21,6 +21,11 @@ const PrimaryFooter = props => {
                </div> 
             </div>
             <div className="row">
+               <div className="col-12 col-sm-4 col-md-3">
+                  <NavLink to="/" className="col-12 text-white">
+                     <span className="display-5 text-white no_text_decoration">The English Shelf</span>
+                  </NavLink>
+                  </div>
 
                <div className="col-12 col-sm-4 col-md-3">
                   <div className="row">
@@ -39,7 +44,6 @@ const PrimaryFooter = props => {
                   </div>
                </div>
 
-
                <div className="col-12 col-sm-4 col-md-3">
                   <div className="row">
                      <NavLink 
@@ -55,6 +59,8 @@ const PrimaryFooter = props => {
                </div>
 
             </div>
+
+
             <div className="row text-center text-white bg-secondary my-3">
                <div className="col-12 text-center text-nowrap">Copyright © Kevin Hastie 2021 - {get_current_year()}</div>
             </div>
