@@ -17,16 +17,15 @@ const PrimaryFooter = props => {
          <div className="container col-12">
             <div className="row">
                <div className="link col-12 d-sm-none text-center text-white" onClick={toppermost}>
-                     back to top
+                  back to top
                </div> 
             </div>
             <div className="row">
                <div className="col-12 col-sm-4 col-md-3">
-                  <NavLink to="/" className="col-12 text-white">
+                  <NavLink to="/" className="col-12 p-0">
                      <span className="display-5 text-white no_text_decoration">The English Shelf</span>
                   </NavLink>
-                  </div>
-
+               </div>
                <div className="col-12 col-sm-4 col-md-3">
                   <div className="row">
                      <NavLink 
@@ -43,7 +42,6 @@ const PrimaryFooter = props => {
                         className="col-12 text-white" >About</NavLink>
                   </div>
                </div>
-
                <div className="col-12 col-sm-4 col-md-3">
                   <div className="row">
                      <NavLink 
@@ -57,10 +55,7 @@ const PrimaryFooter = props => {
                         className="col-12 text-white text-nowrap" >Pro Tips</NavLink>
                   </div>
                </div>
-
             </div>
-
-
             <div className="row text-center text-white bg-secondary my-3">
                <div className="col-12 text-center text-nowrap">Copyright © Kevin Hastie 2021 - {get_current_year()}</div>
             </div>
